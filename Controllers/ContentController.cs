@@ -19,8 +19,7 @@ namespace MVCProjectCamp.Controllers
         public ActionResult ContentByHeading(int id)
         {
             var contentValues = cm.GetListByHeadingID(id);
-            return View(contentValues);
-                                 
+            return View(contentValues);                                 
         }
     }
 }

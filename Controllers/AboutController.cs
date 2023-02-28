@@ -15,7 +15,8 @@ namespace MVCProjectCamp.Controllers
         // GET: About
         public ActionResult Index()
         {
-            return View();
+            var aboutValues = abm.GetList();
+            return View(aboutValues);
         }
         [HttpGet]
         public ActionResult AddAbout()
@@ -26,7 +27,13 @@ namespace MVCProjectCamp.Controllers
         [HttpPost]
         public ActionResult AddAbout(About p)
         {
-            return View();
+            abm.AboutAddBl(p);
+            return RedirectToAction("Index");  
+        }
+
+        public PartialViewResult AboutPartial()
+        {
+            return PartialView();
         }
     }
 }

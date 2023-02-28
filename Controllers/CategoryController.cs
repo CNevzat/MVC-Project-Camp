@@ -13,7 +13,7 @@ using System.Web.Mvc;
 namespace MVCProjectCamp.Controllers
 {
     public class CategoryController : Controller
-    {
+    {   
         // GET: Category
         CategoryManager cm = new CategoryManager(new EFCategoryDal());
         public ActionResult Index()
