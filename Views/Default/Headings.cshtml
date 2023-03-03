@@ -37,10 +37,8 @@ to get the desired effect
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-                <img src="~/AdminLTE-3.0.4/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-                     style="opacity: .8">
-                <span class="brand-text font-weight-light">MVC Project Camp</span>
+            <a href="/Home/HomePage/" class="brand-link">
+                <span style="color:red; font-weight:bold; margin-left:70px;">Homepage</span>
             </a>
 
             <!-- Sidebar -->
@@ -65,7 +63,7 @@ to get the desired effect
                         <li class="nav-item">
                             <a href="/Default/Headings/@item.HeadingID" class="nav-link">
                                 <p>
-                                    @item.HeadingName (0)
+                                    @item.HeadingName 
                                 </p>
                             </a>
                         </li> 
@@ -80,9 +78,9 @@ to get the desired effect
         <div class="content-wrapper">
             <!-- /.content-header -->
             <!-- Main content -->
-            @Html.Action("Index","Default") @*Partial Index'i çağırıyoruz Default Controller'ın içinden*@
+            @Html.Action("Index", "Default") @*Partial Index'i çağırıyoruz Default Controller'ın içinden*@
+            @Html.Action("AllArticles","Default")
             <div class="content">
-               
                 <!-- /.container-fluid -->
             </div>
             <!-- /.content -->

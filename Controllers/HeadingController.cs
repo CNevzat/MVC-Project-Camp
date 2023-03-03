@@ -22,6 +22,12 @@ namespace MVCProjectCamp.Controllers
             return View(headingValues);
         }
 
+        public ActionResult HeadingReport()
+        {
+            var headingValues = hm.GetList();
+            return View(headingValues);
+        }
+
         [HttpGet]
         public ActionResult AddHeading()
         {
@@ -77,6 +83,9 @@ namespace MVCProjectCamp.Controllers
             hm.HeadingDelete(headingValue);
             return RedirectToAction("Index");         
         }
-
+        public ActionResult SweetAlerts()
+        {
+            return View();
+        }
     }
 }

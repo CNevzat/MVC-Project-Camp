@@ -17,7 +17,7 @@ namespace MVCProjectCamp.Controllers
         WriterLoginManager wm = new WriterLoginManager(new EFWriterDal());
         // GET: Login
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Admin()
         {
             return View();
         }
